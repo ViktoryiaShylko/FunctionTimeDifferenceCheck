@@ -12,7 +12,3 @@ function formatDate(date) {
       return date.toLocaleString();
     }
 };
-alert(formatDate(new Date - 1)); 
-alert(formatDate(new Date(new Date - 30 * 1000)) ); 
-alert(formatDate(new Date(new Date - 5 * 60 * 1000)) ); 
-alert(formatDate(new Date(new Date - 86400* 4 * 1000)) );
