@@ -9,6 +9,9 @@ function formatDate(date) {
     } else if (differenceMilliSec >= 60000 && differenceMilliSec < 360000) {
         return Math.floor(differenceMilliSec/60000) + ' мин. назад';
     } else {
-      return date.toLocaleString();
+        let options = { day: '2-digit',  month: '2-digit', year: 'numeric', hour: 'numeric', minute: 'numeric' };
+        let finalDate = new Intl.DateTimeFormat('en-GB', options).format(date);
+        return finalDate.replaceAll('/', '.').replace(',', ' ');
     }
 };
+alert( formatDate(new Date(new Date - 86400* 4 * 1000)) );
